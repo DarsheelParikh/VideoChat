@@ -43,7 +43,8 @@ peer.on("open", (id) => {
 socket.on("createMessage", (message, userName) => {
     $(".messages").append(`
         <div class="message">
-            <b><i class = "far fa-user-circle"> </i> <span> ${userName === user?"me":userName}</span></b>
+            <b><i class="far fa-user-circle"></i> <span> ${userName === user ? "me" : userName
+        }</span> </b>
             <span>${message}</span>
         </div>
     `)
