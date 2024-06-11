@@ -45,6 +45,7 @@ app.post("/send-mail",(req, res) => {
         html:`<p> Hi There! </p> <p> Come and Join Me For A Video Chat here -${url}! </p>`
     }
     transporter.sendMail(mailData,(error, info) =>{
+        console.log(mailData)
         if(error){
             return console.log (error)
         }
